@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task renders basic task elements 1`] = `
+<DocumentFragment>
+  <div
+    class="ant-card ant-card-bordered"
+    data-testid="task-card"
+  >
+    <div
+      class="ant-card-head"
+    >
+      <div
+        class="ant-card-head-wrapper"
+      >
+        <div
+          class="ant-card-head-title"
+        >
+          TestTask
+        </div>
+        <div
+          class="ant-card-extra"
+        >
+          2021-05-24
+        </div>
+      </div>
+    </div>
+    <div
+      class="ant-card-body"
+    >
+      This is a Task under unit testing
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Task renders null when no title 1`] = `<DocumentFragment />`;
