@@ -3,7 +3,6 @@ import {Layout} from 'antd';
 import './App.less';
 import {Auth0Provider} from '@auth0/auth0-react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import axios from 'axios';
 import Home from './home/Home';
 import BelMenu from './menu/BelMenu';
 import Account from './account/Account';
@@ -13,7 +12,7 @@ function App() {
     const reloadOnNewVersion = async () => {
       if (window.location.hostname !== 'localhost' ) {
         try {
-          let res = await axios.get(`/version.json`)
+          let res = await fetch(`/version.json`)
           console.log(res.data);
           if ( localStorage.appVersion !== res.data.version ) {
             console.log(`reloading with version ${res.data.version}`); // TODO remove this line

@@ -7,6 +7,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 import logo from '../images/bel-logo.svg';
 import './BelMenu.less';
 
+import packageDetails from '../../package.json';
+const version = packageDetails.version;
+
 const {Sider} = Layout;
 
 function BelMenu() {
@@ -48,6 +51,7 @@ function BelMenu() {
         }
 
       </Menu>
+      <div style={{position: 'absolute', bottom: 50, color: '#fff', textAlign: 'center', width: '100%' }}>v{version}</div>
     </Sider>
   );
 }
