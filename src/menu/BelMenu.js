@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom';
 import { useAuth0 } from "@auth0/auth0-react";
 
 import logo from '../images/bel-logo.svg';
+import './BelMenu.less';
 
 const {Sider} = Layout;
 
@@ -23,14 +24,16 @@ function BelMenu() {
     'menu-login': () => loginWithRedirect(),
   }
 
-  let onMenuClick = item => {
+  const onMenuClick = item => {
     console.log(item);
     menuActions[item.key]();
   }
 
+  const onLogoClick = () => history.push('/');
+
   return (
     <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-        <img src={logo} style={{height: 32, margin: "5px 0"}} alt="BEL logo"/>
+        <div className='bel-logo-container'><img className='bel-logo' src={logo} alt="BEL logo" onClick={onLogoClick}/></div>
       <Menu onClick={onMenuClick}>
         {
           isAuthenticated

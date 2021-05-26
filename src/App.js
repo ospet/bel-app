@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Layout} from 'antd';
-import './App.css';
+import './App.less';
 import {Auth0Provider} from '@auth0/auth0-react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import axios from 'axios';

@@ -19,6 +19,7 @@
     "react-hot-loader": "^4.13.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
     "workbox-broadcast-update": "^5.1.4",
@@ -34,9 +35,9 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build && node ./scripts/createVersion.js",
-    "test": "react-app-rewired test",
+    "start": "craco start",
+    "build": "craco build && node ./scripts/createVersion.js",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -56,5 +57,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.1.2",
+    "craco-less": "^1.17.1",
+    "http-proxy-middleware": "^2.0.0"
   }
 }
